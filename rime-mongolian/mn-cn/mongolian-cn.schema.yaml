@@ -1,0 +1,90 @@
+# Rime schema
+# encoding: utf-8
+#
+# 蒙文（回鹘式） - Mongolian CN
+#
+# 黑传说 Atlas Jobinson <jobinson99@hotmail.com>
+#
+
+schema:
+  schema_id: mongolian-cn
+  name: 蒙文（回鹘式）Mongolian-cn
+  version: "0.1"
+  author:
+    - 黑传说 Atlas Jobinson <jobinson99@hotmail.com>
+  description: |
+    蒙文（回鹘式）输入方案。
+
+engine:
+  processors:
+    - punctuator
+    - express_editor
+  segmentors:
+    - punct_segmentor
+  translators:
+    - punct_translator
+
+translator:
+  dictionary: mongolian-cn
+
+punctuator:
+  half_shape: &symtable
+    "a" : ᠠ
+    "b" : ᠠ
+    "c" : ᠼ
+    "d" : ᠳ
+    "e" : ᠡ
+    "f" : ᠹ
+    "g" : ᠭ
+    "h" : ᠬ
+    "i" : ᠢ
+    "j" : ᠵ
+    "k" : ᠺ
+    "l" : ᠯ
+    "m" : ᠮ
+    "n" : ᠨ
+    "o" : ᠥ
+    "p" : ᠫ
+    "q" : ᠴ
+    "r" : ᠷ
+    "s" : ᠰ
+    "t" : ᠲ
+    "u" : ᠦ
+    "v" : ᠤ
+    "w" : ᠣ
+    "x" : ᠱ
+    "y" : ᠶ
+    "z" : ᠽ
+    "A" :
+    "B" :
+    "C" : ᡁ
+    "D" :
+    "E" : ᠧ
+    "F" :
+    "G" :
+    "H" : ᠾ
+    "I" : ᠆
+    "J" : ᠁
+    "K" : ᠻ
+    "L" : ᡀ
+    "M" :
+    "N" : ᠩ
+    "O" :
+    "P" :
+    "Q" :
+    "R" : ᠿ
+    "S" :
+    "T" :
+    "U" :
+    "V" :
+    "W" : ᠸ
+    "X" :
+    "Y" :
+    "Z" : ᡂ
+    "," : ᠂
+    "." : ᠃
+    ":" : ᠄
+    "/" : ᠅
+    "!" : "!"
+    "?" : "?"
+  full_shape: *symtable

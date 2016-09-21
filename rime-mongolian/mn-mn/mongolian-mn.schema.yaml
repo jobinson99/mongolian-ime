@@ -1,0 +1,103 @@
+# Rime schema
+# encoding: utf-8
+#
+# 蒙文（西里尔式） - Mongolian MN
+#
+# 黑传说 Atlas Jobinson <jobinson99@hotmail.com>
+#
+
+schema:
+  schema_id: mongolian-mn
+  name: 蒙文（西里尔式）Mongolian-mn
+  version: "0.1"
+  author:
+    - 黑传说 Atlas Jobinson <jobinson99@hotmail.com>
+  description: |
+    蒙文（西里尔式）输入方案。
+
+engine:
+  processors:
+    - punctuator
+    - express_editor
+  segmentors:
+    - punct_segmentor
+  translators:
+    - punct_translator
+
+
+translator:
+  dictionary: mongolian-mn
+
+punctuator:
+  half_shape: &symtable
+    "a" : й
+    "b" : м
+    "c" : ё
+    "d" : б
+    "e" : у
+    "f" : ө
+    "g" : а
+    "h" : х
+    "i" : ш
+    "j" : р
+    "k" : о
+    "l" : л
+    "m" : т
+    "n" : и
+    "o" : ү
+    "p" : з
+    "q" : ф
+    "r" : ж
+    "s" : ы
+    "t" : э
+    "u" : г
+    "v" : с
+    "w" : ц
+    "x" : ч
+    "y" : н
+    "z" : я
+    "A" : Й
+    "B" : М
+    "C" : Ё
+    "D" : Б
+    "E" : У
+    "F" : Ө
+    "G" : А
+    "H" : Х
+    "I" : Ш
+    "J" : Р
+    "K" : О
+    "L" : Л
+    "M" : Т
+    "N" : И
+    "O" : Ү
+    "P" : З
+    "Q" : Ф
+    "R" : Ж
+    "S" : Ы
+    "T" : Э
+    "U" : Г
+    "V" : С
+    "W" : Ц
+    "X" : Ч
+    "Y" : Н
+    "Z" : Я
+    "$" : ₮
+    "-" : е
+    "_" : Е
+    "+" : Щ
+    "," : ь
+    "." : в
+    "/" : ю
+    "<" : Ь
+    ">" : В
+    "?" : Ю
+    ":" : Д
+    ";" : д
+    "\"" : П
+    "'" : п
+    "[" : к
+    "]" : ъ
+    "{" : К
+    "}" : Ъ
+  full_shape: *symtable

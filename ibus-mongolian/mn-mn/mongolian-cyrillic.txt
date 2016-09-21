@@ -1,0 +1,275 @@
+### This file must be encoded into UTF-8.
+### File header must not be modified
+### This file must be encoded into UTF-8.
+### This table under LGPL
+### comments start with ### not single #
+### Derive from the format of SCIM Table, so you can modify the table from
+### scim-tables' table
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_1
+
+### Begin Table definition.
+BEGIN_DEFINITION
+
+### License
+LICENSE = LGPL
+
+### An unique id to distinguish this table among others.
+### Use uuidgen to generate this kind of id.
+UUID = fa9c4f7f-50a4-43ba-81e1-d777bea4632f
+
+### A unique number indicates the version of this file.
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+SERIAL_NUMBER = 20160630
+
+### ICON can be any format as long as your pygtk can recognized
+### the most widely ones are "png" and "svg", letter one is recommended
+ICON = mongolian-cyrillic.svg
+
+### The default name of this table, this is needed
+NAME = Mongolian-Cyrillic
+
+### The local names of this table, this is optional
+NAME.mn_MN = Марал
+
+### Description
+DESCRIPTION = Cyrillic Mongolian input engine table for IBus Table. Uses Almas keyboard layout.
+
+### Supported languages of this table
+### sigle "zh_CN" just be recognized as zh_CN,
+### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
+### and "en_US, zh_CN" will be just ignored.
+LANGUAGES = mn_MN
+
+### The author of this table
+AUTHOR = Atlas Jobinson <jobinson99@hotmail.com>
+
+### Prompt string to be displayed in the status area, CN will be replaced by
+### the gettext tools in runtime as 中.
+STATUS_PROMPT = Ө
+
+### Valid input chars.
+VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.?!1234567890<>()[]{}"':;#$&-_+/\|`~
+
+### The Keyboard Layout used by this table. Unset or set to "Unknown" to accept any kind of layouts.
+LAYOUT = us
+
+### The max number of input keys for every phrase or character.
+MAX_KEY_LENGTH = 2
+
+### Use auto_commit mode as default
+AUTO_COMMIT = TRUE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT = FALSE
+### Not use full width letter by default
+DEF_FULL_WIDTH_LETTER = FALSE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE = FALSE
+
+
+
+### If true then the first candidate phrase
+### will be selected automatically during inputing.
+AUTO_SELECT = TRUE
+
+### If true then a multi wildcard will be appended
+### at the end of inputing string automatically.
+AUTO_WILDCARD = FALSE
+
+
+### If true then the inputted string will be automatically splitted during inputing.
+AUTO_SPLIT = TRUE
+
+### If true then the phrases' frequencies will be adjusted dynamically.
+DYNAMIC_ADJUST = TRUE
+
+### If true then the preedit area will be filled up by the current candidate phrase automatically.
+AUTO_FILL = TRUE
+
+### If true then the lookup table will always be shown if there is any candidate phrase.
+### Otherwise the lookup table won't be shown unless the user requires it by moving the preedit caret left.
+ALWAYS_SHOW_LOOKUP = FALSE
+
+### Enable full width punctuation property
+USE_FULL_WIDTH_PUNCT = FALSE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT = FALSE
+
+### Enable full width letter property
+USE_FULL_WIDTH_LETTER = FALSE
+
+### Use full width letter by default
+DEF_FULL_WIDTH_LETTER = FALSE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE = FALSE
+
+### Whether support PinYin Mode, default is true.
+### this feature is just for Chinese, set it to False if your IM is not
+### Chinese.
+PINYIN_MODE = FALSE
+
+### If true then the phrases' frequencies will be adjusted dynamically
+### according your using frequency.
+DYNAMIC_ADJUST = FALSE 
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS = 
+
+### Rules for constructing user defined phrase
+### "ce" stands for "ci equal", a Chinese English :), means "phrase length
+### equal to", thus ce2 -> phrase length equal to 2; and "ca" means "phrase
+### length equal or above", so ca4 -> phrase length equal or above 4.
+### p21 -> the 1st key of 2nd character in the phrase, and so on.
+### Each rule separate via ";". 
+### Example below is a complete rule-set, 
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] = [2,+∞], which is the range of length
+### of phrase. This have to be satisfied if you need ibus-table to build up
+### your own inputed phrase via your daily using.
+### RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+
+END_DEFINITION
+
+### Begin Table data.
+### Format of every line whose formated in "input_keys\tphrase\tfreq\n" is an
+### entry.
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+`	,	0
+~	"	6000
+~	'	5000
+~	-	4000
+~	+	3000
+~	_	2000
+~	~	1000
+1	1	1000
+!	!	1000
+2	2	1000
+@	@	1000
+3	3	1000
+#	#	0
+4	4	1000
+$	₮	1000
+$	$	0
+5	5	1000
+%	%	1000
+6	6	1000
+^	^	1000
+7	7	1000
+&	&	1000
+8	8	1000
+*	*	1000	
+9	9	1000
+(	(	1000
+0	0	1000
+)	)	1000
+(	(	4000
+(	[	3000
+(	{	2000
+(	<	1000
+)	)	4000
+)	]	3000
+)	}	2000
+)	>	1000
+-	е	0
+_	Е	0
++	Щ	0
+a	й	0
+b	м	0
+c	ё	0
+d	б	0
+e	у	0
+f	ө	0
+g	а	0
+h	х	0
+i	ш	0
+j	р	0
+k	о	0
+l	л	0
+m	т	0
+n	и	0
+o	ү	0
+p	з	0
+q	ф	0
+r	ж	0
+s	ы	0
+t	э	0
+u	г	0
+v	с	0
+w	ц	0
+x	ч	0
+y	н	0
+z	я	0
+A	Й	0
+B	М	0
+C	Ё	0
+D	Б	0
+E	У	0
+F	Ө	0
+G	А	0
+H	Х	0
+I	Ш	0
+J	Р	0
+K	О	0
+L	Л	0
+M	Т	0
+N	И	0
+O	Ү	0
+P	З	0
+Q	Ф	0
+R	Ж	0
+S	Ы	0
+T	Э	0
+U	Г	0
+V	С	0
+W	Ц	0
+X	Ч	0
+Y	Н	0
+Z	Я	0
+{	К	0
+}	Ъ	0
+[	к	0
+]	\	0
+\	.	0
+|	?	5000
+|	:	4000
+|	;	3000
+|	\	2000
+|	/	1000
+:	Д	0
+"	П	0
+;	д	0
+'	п	0
+/	ю	0
+,	ь	0
+.	в	0
+<	Ь	0
+>	В	0
+?	Ю	0
+END_TABLE
+
+### Since some input methods use different table for every character to make
+### phrase, such as ZhengMa, they need explict define the goucima (the
+### phrase-building code for the given character), the format of every entry is
+### "character\tgoucima\n". 
+### For the input method which just use the full code as word-building code
+### just skip this field. The ibus-table will build the codes needed from
+### above TABLE.
+### if you don't need different word-building code, please comment out the
+### next few lines with ###, just like these lines you are look at now.
+### BEGIN_GOUCI
+### character_1	goucima_1
+### character_1	goucima_2
+### END_GOUCI

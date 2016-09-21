@@ -1,0 +1,18 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Mongolian CN - 蒙文（回鹘式）
+#
+# 黑传说 Atlas Jobinson <jobinson99@hotmail.com>
+#
+
+
+---
+name: mongolian-cn
+version: "2016.06.30"
+sort: by_weight
+use_preset_vocabulary: false
+...
+
+ㄓ	zhi
+
