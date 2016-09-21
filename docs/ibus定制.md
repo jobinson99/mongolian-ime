@@ -1,0 +1,176 @@
+定制参数说明
+===================
+
+```
+### File header must not be modified
+### 该码表文件必须按UTF-8格式编码保存
+### 注释行以### 开头而不是一个#
+### 它起源于scim码表格式，所以你可以用scim-tables码表来修改
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_0
+
+### 开始定义
+BEGIN_DEFINITION
+
+### License
+LICENSE = LGPL
+
+### UUID用于标识该表以便于区分其他的表，你可以在终端中使用
+### uuidgen命令产生一个uuid给该表
+UUID = 87aac124-2196-4c8f-a487-4844473c8fc7
+
+### 版本号,但不要太长
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+### Just make your table version-able
+SERIAL_NUMBER = 20160630
+
+### 输入法图标，可以是pygtk识别的图片格式，一般用png,svg格式
+### 该图标放在icons目录
+ICON = mongolian-unicode-cn.svg
+
+### 默认的表名，必填
+NAME = Mongolian-Unicode-CN
+
+### 本地名，选添
+### NAME.zh_CN = 形码
+### NAME.zh_HK = 形碼
+### NAME.zh_TW = 形碼
+
+### 描述可填可不填
+DESCRIPTION = Mongolian Unicode input engine table for IBus Table. Uses Almas keyboard layout.
+
+### 该码表支持的语言
+### 只用"zh_CN"则认为是zh_CN
+### 但是如果是zh_CN,zh_HK或其他zh_XX则认为是zh
+### and "en_US, zh_CN" will be just ignored.
+LANGUAGES = mn_CN
+
+### 该表作者
+AUTHOR = Atlas Jobinson <jobinson99@hotmail.com>
+
+### 提示字符，它将被显示在状态栏中，CN会被“中”字代替
+STATUS_PROMPT = Mipa
+
+### 可输入的字符
+VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.?!1234567890()":;#/
+
+### Layout
+LAYOUT = us
+
+### 每个字或短语的最大输入长度
+MAX_KEY_LENGTH = 2
+
+### 自动上屏功能默认关闭FALSE(TRUE打开)
+### 有人说五笔不能自动上屏把这修改成TRUE就好了
+AUTO_COMMIT = TRUE
+
+### 标点符号 默认是全角格式
+DEF_FULL_WIDTH_PUNCT = FALSE
+### 全角字符默认关闭
+DEF_FULL_WIDTH_LETTER = FALSE
+
+### 是否允许用户定义词组短语，默认允许
+### 但你需要定义构词法则
+### 开启后使用该表时定义词组方法:
+### 先输入词组中的每一个字,输完选字时用Ctrl+"数字键" 选取
+### 词组中的第一个字,然后输入词组中的第二个字,
+### 输完选字时用Ctrl+"数字键" 选取
+### 直到输入该词组的最后一个字,输完后直接用数字键选则
+### 如此,这一词组便录入完闭,以后即可按后面定义的词组法则来输入该词
+USER_CAN_DEFINE_PHRASE = FALSE
+
+### 是否允许拼音模式，默认允许，该功能只是为中文设计
+### 如果你的输入法不是中文的可以关闭它(似乎没什么用??注音模式?反正我不会用)
+PINYIN_MODE = FALSE
+
+### 字,词组,短语频率调节.默认允许
+DYNAMIC_ADJUST = FALSE 
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS = 
+
+### 用户自定义词组后该词输入规则
+### ce表示词组长度等于，例如ce2表示词组长度等于2，
+### ca表示词组长度等于或大于，
+### p21表示词组中第2个字的第一笔（对应的按键）
+### 每一个规则用;号隔开;ca4:p11+p21+p31+p41
+
+END_DEFINITION
+
+### 开始码表数据
+### 码表格式为：“输入建\t(制表符)字词\t(制表符)频率\n(换行)”
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+a	ᠠ	1
+e	ᠡ	1
+i	ᠢ	1
+w	ᠣ	1
+v	ᠤ	1
+o	ᠥ	1
+u	ᠦ	1
+E	ᠧ	1
+n	ᠨ	1
+b	ᠪ	1
+p	ᠫ	1
+h	ᠬ	1
+g	ᠭ	1
+m	ᠮ	1
+l	ᠯ	1
+s	ᠰ	1
+x	ᠱ	1
+t	ᠲ	1
+d	ᠳ	1
+q	ᠴ	1
+j	ᠵ	1
+y	ᠶ	1
+r	ᠷ	1
+W	ᠸ	1
+N	ᠩ	1
+f	ᠹ	1
+k	ᠺ	1
+K	ᠻ	1
+c	ᠼ	1
+z	ᠽ	1
+R	ᠿ	1
+H	ᠾ	1
+L	ᡀ	1
+C	ᡁ	1
+Z	ᡂ	1
+A	᠎	1
+S	 	1
+D	᠋	1
+F	᠌	1
+G	᠍	1
+I	᠆	1
+Q	᠁	1
+,	᠂	1
+.	᠃	1
+:	᠄	1
+/	᠅	1
+!	!	1
+?	?	1
+END_TABlE
+
+### 有些输入法对词组中的字使用不同的码表，例如郑码，它需要定义guocima
+### 如果你不需要请把下面的注释掉
+### Since some input methods use different table for every character to make
+### phrase, such as ZhengMa, they need explict define the goucima (the
+### phrase-building code for the given character), the format of every entry is
+### "character\tgoucima\n". 
+### For the input method which just use the full code as word-building code
+### just skip this field. The ibus-table will build the codes needed from
+### above TABLE.
+### if you don't need different word-building code, please comment out the
+### next few lines with ###, just like these lines you are look at now.
+### BEGIN_GOUCI
+### character_1	goucima_1
+### character_1	goucima_2
+### END_GOUCI
+
+
+```
