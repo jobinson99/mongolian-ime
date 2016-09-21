@@ -4,8 +4,9 @@
 
 输入法示例结果如下：
 
-![](images/snapshot.png)
+![](images/linux输入法截图.png)
 
+![](images/macos输入法截图.png)
 
 共有两套输入法引擎
 
