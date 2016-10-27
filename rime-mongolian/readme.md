@@ -1,4 +1,4 @@
-蒙文输入法之ibus Mongolian input table for Rime
+蒙文输入法之rime Mongolian input table for Rime
 ==============================
 
 ## 说明
