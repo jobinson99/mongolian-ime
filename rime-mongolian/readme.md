@@ -1,25 +1,27 @@
-蒙文输入法之rime Mongolian input table for Rime
+蒙文输入法之rime版 Mongolian input method on Rime
 ==============================
 
 ## 说明
 
 共有两份方案
 
-- mongolian-unicode-cn 文件夹名为 mn-cn
-- mongolian-cyrillic 文件夹名为 mn-mn
+- mongolian-unicode-cn 回鹘式蒙文输入法（内蒙用），文件夹名为 mn-cn
+- mongolian-cyrillic 西里尔蒙文输入法（外蒙用），文件夹名为 mn-mn
 
 ## 一、 linux下使用
 
 ### 1.1 依赖软件
 
-- ibus 输入法框架
-- ibus-rime 输入法框架
-- unifont 字体
+- ibus 或者 fcitx输入法框架
+- 如果用的ibus，需要 ibus-rime，如果是fcitx，需要fcitx-rime
+- unifont 字体，用于显示蒙文字体。
 
 依赖软件安装
 ```
 sudo apt-get install ibus ibus-rime unifont
 sudo chown `whoami` ~/.config/ibus/rime
+或
+sudo apt-get install fcitx fcitx-rime unifont
 ```
 
 ### 1.2 蒙文 回鹘式
@@ -72,7 +74,7 @@ patch:
 2. 设置定制：打开 `./mn-mn/mongolian-mn.schema.yaml`，根据需要修改
 3. 重新打包并重新部署 './mn-mn/linux-install.sh'
 
-## 二、 macos下使用
+## 二、 Mac OS下使用
 
 ### 1. 全新安装
 

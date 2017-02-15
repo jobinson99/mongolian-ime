@@ -1,11 +1,11 @@
-蒙文输入法之ibus Mongolian input table for IBus
+蒙文输入法之ibus版 Mongolian input method on IBus
 ==============================
 
 ## 说明
 
 共有两份方案
-- mongolian-unicode-cn 
-- mongolian-cyrillic
+- mongolian-unicode-cn   回鹘式蒙文输入法（内蒙用），文件夹名为 mn-cn
+- mongolian-cyrillic 西里尔蒙文输入法（外蒙用），文件夹名为 mn-mn
 
 ## linux下使用
 
