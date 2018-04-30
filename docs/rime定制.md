@@ -20,8 +20,8 @@
 
 共享文件夹：默认安装位置，有些权限严格的系统，是只读的，软件升级会丢失此处的文件
 
--【中州韻】 /usr/share/rime-data/
--【小狼毫】 "安裝目錄\data"
+- 【中州韻】 /usr/share/rime-data/
+- 【小狼毫】 "安裝目錄\data"
 - 【鼠鬚管】 "/Library/Input Methods/Squirrel.app/Contents/SharedSupport/"
 
 用户资料夹：使用的文件夹，包括用户的自定义字典。
